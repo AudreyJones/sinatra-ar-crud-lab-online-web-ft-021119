@@ -36,10 +36,12 @@ class ApplicationController < Sinatra::Base
 
 ##UPDATE CRUD Actions
   get '/articles/:id/edit' do
+    binding.pry
     @article = Article.find_by(id: params[:id])
     erb :edit
+
   end
-binding.pry
+
 
   patch '/articles/:id' do
     @article = Article.find_by(params[:id])
