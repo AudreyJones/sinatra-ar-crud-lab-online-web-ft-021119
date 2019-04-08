@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
 
 ##UPDATE CRUD Actions
   get '/articles/:id/edit' do
-    @article = Article.find_by(title: params[:id])
+    @article = Article.find_by(id: params[:id])
     erb :edit
   end
 
