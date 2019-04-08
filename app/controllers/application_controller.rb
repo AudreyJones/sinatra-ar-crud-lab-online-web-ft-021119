@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
 ##READ CRUD Actions
   get '/articles/:id' do
     @article = Article.find_by({id: params[:id]})
-    binding.pry
+    # binding.pry
     erb :show
   end
 
