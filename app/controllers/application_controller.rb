@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
   post '/articles' do
     # binding.pry
     @article = Article.create(title: params[:title], content: params[:content])
-binding.pry
+# binding.pry
     erb "/@articles/#{@article.id}"
 
   end
