@@ -53,7 +53,7 @@ class ApplicationController < Sinatra::Base
   end
 
 ##DELETE CRUD Actions
-  delete '/articles/:id' do
+  delete '/articles/:id/delete' do
     binding.pry
     Article.destroy(params[:id])
     redirect to "/articles"
