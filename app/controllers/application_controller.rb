@@ -25,7 +25,6 @@ class ApplicationController < Sinatra::Base
   post '/articles' do
     @article = Article.create(title: params[:title], content: params[:content])
     erb "/@articles/#{@article.id}"
-
   end
 
 ##READ CRUD Actions
